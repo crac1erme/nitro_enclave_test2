@@ -1,0 +1,7 @@
+# config.yaml
+vsock:
+  host_port: 10000  # VSOCK服务端监听端口
+  host_cid: 3    # 可选：工作池最大并发数（优化项）
+  connect_timeout: 30s #链接超时
+  read_timeout: 30s   # 可选：连接读超时
+  write_timeout: 30s  # 可选：连接写超时
