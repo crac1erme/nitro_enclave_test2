@@ -119,8 +119,7 @@ func main() {
 		config.VSOCK.ServerPort, config.VSOCK.MaxWorkers)
 
 	// 转换配置为uint32（匹配ListenContextID的参数类型）
-	//listenCID, _ := vsock.ContextID() //nitro enclave连宿主机用cid3
-	listenCID := uint32(0)
+	listenCID, _ := vsock.ContextID()
 	listenPort := uint32(config.VSOCK.ServerPort)
 
 	listener, err := vsock.ListenContextID(listenCID, listenPort, nil)
