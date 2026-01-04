@@ -1,6 +1,6 @@
 module nitro_enclave2
 
-go 1.25
+go 1.24
 
 require (
 	github.com/mdlayher/socket v0.4.1 // indirect
