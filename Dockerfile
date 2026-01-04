@@ -12,6 +12,7 @@ RUN go mod download
 
 # 复制项目源码（仅复制 Enclave 服务相关代码，减少构建上下文）
 COPY cmd/enclave-server ./cmd/enclave-server
+COPY cmd/enclave-server/config.yaml /config.yaml
 
 # 编译 Enclave 服务（静态编译，无外部依赖，适配 Enclave 极简环境）
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
